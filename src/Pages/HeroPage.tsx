@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import pix from "../Assets/istockphoto-1489836036-612x612.jpg"
+import pix from "../Assets/istockphoto-490786468-612x612.jpg"
 
 const HeroPage = () => {
   return (
@@ -9,7 +9,7 @@ const HeroPage = () => {
             <Main>
                <SectionA>
                <BigText>Blood donation is a simple act with a big impact.</BigText>
-                <ConceptText>Blood donation is a simple act of compassion that can make a big difference. Please give the gift of life today."</ConceptText>
+                <ConceptText>Blood donation is a simple act of compassion that can make a big difference. Please give the gift of life today.</ConceptText>
                 <Get>
                     Get Started With Us
                 </Get>
@@ -27,7 +27,8 @@ export default HeroPage
 
 const SectionB =styled.div`
 width: 55%;
-object-fit: cover;
+object-fit: contain;
+padding-top: 10px;
 img{
     height: 100%;
     width: 100%;
@@ -40,11 +41,13 @@ background-color: #66ccf4;
 border-radius: 10px;
 width: 180px;
 margin-top: 10px;
+color: whitesmoke;
+cursor: pointer;
 `
 
 
 const ConceptText =styled.div`
-font-size: 16px;
+font-size: 18px;
 line-height: 32px;
 font-family: "Poppins";
 font-weight: 400;

@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import {RiArrowDropDownLine} from "react-icons/ri"
 import styled from "styled-components";
 
 const Header = () => {
@@ -9,13 +11,15 @@ const Header = () => {
           <Logo>U&A</Logo>
           <NavHolder>
             <Navs>Home</Navs>
-            <Navs>Solution</Navs>
+            <Navs style={{display: "flex"}}>Solution
+                <Icon />
+            </Navs>
             <Navs>About Us</Navs>
             <Navs>Our Partners</Navs>
             <Navs>Contact Us</Navs>
           </NavHolder>
           <ButtonHolder>
-            <Button>Login</Button>
+            <Button to="/register">Login</Button>
             <Button2>Sign-Up</Button2>
           </ButtonHolder>
         </Main>
@@ -25,6 +29,8 @@ const Header = () => {
 };
 
 export default Header;
+
+const Icon = styled(RiArrowDropDownLine)``
 
 const Container = styled.div`
   width: 100%;
@@ -53,40 +59,55 @@ const Logo = styled.div`
   align-items: center;
 `;
 const NavHolder = styled.div`
-width: 55%;
-display: flex;
-justify-content: center;
+  width: 55%;
+  display: flex;
+  justify-content: center;
 `;
 
 const Navs = styled.div`
-margin-left: 15px;
-font-size: 16px;
-font-weight: 400;
+  margin-left: 15px;
+  font-size: 16px;
+  font-weight: 400;
 `;
 
 const ButtonHolder = styled.div`
-width: 25%;
-display: flex;
-justify-content: center;
-align-items: center;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
-const Button = styled.div`
-font-size: 16px;
-font-weight: 500;
-margin-left: 10px;
-padding: 10px 15px;
-padding: 10px 15px;
-cursor: pointer;
+const Button = styled(NavLink)`
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 10px;
+  height: 40px;
+  width: 70px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #263136;
 `;
 
 const Button2 = styled.div`
-font-size: 16px;
-font-weight: 500;
-margin-left: 10px;
-padding: 10px 15px;
-background-color: #66ccf4;
-border-radius: 20px;
-color: white;
-cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 15px;
+  /* padding: 10px 15px; */
+  background-color: #66ccf4;
+  border-radius: 20px;
+  color: white;
+  height: 40px;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  :hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: #66ccf4;
+    transition: all 400ms ease-in-out;
+  }
 `;
