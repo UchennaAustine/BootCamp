@@ -72,15 +72,21 @@ align-items: center;
 `;
 
 const Button = styled.div`
-font-size: 18px;
-font-weight: 600;
+font-size: 16px;
+font-weight: 500;
 margin-left: 10px;
-
+padding: 10px 15px;
+padding: 10px 15px;
+cursor: pointer;
 `;
 
 const Button2 = styled.div`
-font-size: 18px;
-font-weight: 600;
+font-size: 16px;
+font-weight: 500;
 margin-left: 10px;
-
+padding: 10px 15px;
+background-color: #66ccf4;
+border-radius: 20px;
+color: white;
+cursor: pointer;
 `;
